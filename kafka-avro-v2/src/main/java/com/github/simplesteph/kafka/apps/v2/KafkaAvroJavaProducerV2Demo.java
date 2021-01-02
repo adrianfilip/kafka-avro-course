@@ -2,6 +2,7 @@ package com.github.simplesteph.kafka.apps.v2;
 
 import com.example.Customer;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
+import java.util.List;
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 
@@ -31,7 +32,7 @@ public class KafkaAvroJavaProducerV2Demo {
                 .setLastName("Doe")
                 .setHeight(178f)
                 .setWeight(75f)
-                .setEmail("john.doe@gmail.com")
+				        .setCustomerEmails(List.of("john.doe@gmail.com"))
                 .setPhoneNumber("(123)-456-7890")
                 .build();
 
